@@ -73,7 +73,7 @@ Mongoimport respective .JSON file into thier respective database Collections
 
 - Populate localhost mongodb database (explained in Step5 above).
 - goto .env and make sure to use correct 'CONNECTION_URL'
-- then, goto main folder location i.e. cd LIBRARYMANAGEMENTSYSTEM_MERN/ and use command :
+- then, goto main folder location i.e. cd LMS/ and use command :
 
 ```
 docker-compose up

@@ -131,7 +131,7 @@ const patchUserDetail = async (req, res) => {
 
       res.status(StatusCodes.OK).json({
         success: true,
-        message: `Verify Email ! OTP Verification code sended to email ${maskedEmail}`,
+        message: `Verify Email ! OTP Verification code sent to email ${maskedEmail}`,
         ENTER_OTP: true,
       })
 

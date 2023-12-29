@@ -27,38 +27,38 @@ const maskEmail = async (email) => {
 
 // OTP Code Hasher
 const generateOtp = async (otp_Code) => {
-  const hashed_otpCode = await bcrypt.hash(String(otp_Code), 10)
-  return hashed_otpCode
+   const hashed_otpCode = await bcrypt.hash(String(otp_Code), 10)
+   return hashed_otpCode
 }
 
 // Mail SENDER - Create a transporter with Gmail SMTP settings
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
+ host: 'smtp.gmail.com',
   port: 465,
   secure: true,
   service: 'gmail',
   auth: {
     user: process.env.EMAIL_USERNAME,
     pass: process.env.EMAIL_PASSWORD,
-  },
+ },
 })
 
 // Function to send an email
 const sendEmail = async (to, otp) => {
-  try {
-    const mailOptions = {
-      from: process.env.EMAIL_USERNAME,
+ try {
+   const mailOptions = {
+     from: process.env.EMAIL_USERNAME,
       to,
-      subject: 'Verify Email ! Library Management System',
-      html: `<p>Your OTP Code is <strong>${otp}</strong>. This will expire in 60 seconds!</p>`,
-    }
+     subject: 'Verify Email ! Library Management System',
+     html: `<p>Your OTP Code is <strong>${otp}</strong>. This will expire in 60 seconds!</p>`,
+   }
 
-    const info = await transporter.sendMail(mailOptions)
+   const info = await transporter.sendMail(mailOptions)
     // console.log('Email sent:', info.envelope)
     // console.log('Email sent:', info)
   } catch (error) {
-    console.error('Error:', error)
-  }
+   console.error('Error:', error)
+ }
 }
 
 const postUserSignup = async (req, res) => {
@@ -113,7 +113,7 @@ const postUserSignup = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: `Verify Email ! OTP Verification code sended to email ${maskedEmail}`,
+      message: `Verify Email ! OTP Verification code sent to email ${maskedEmail}`,
       ENTER_OTP: true,
     })
 
@@ -145,7 +145,7 @@ const postUserSignup = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: `Email Already Exists ! Verify Email,OTP Verification code sended to email ${maskedEmail}`,
+      message: `Email Already Exists ! Verify Email,OTP Verification code sent to email ${maskedEmail}`,
       ENTER_OTP: true,
     })
 
@@ -203,7 +203,7 @@ const resendOtpCode = async (req, res) => {
   if (new Date() < getTokenData.expiresAt) {
     return res.status(200).json({
       success: true,
-      message: `OTP Code Already Sended !`,
+      message: `OTP Code Already Sent !`,
       ENTER_OTP: true,
     })
   }
@@ -225,7 +225,7 @@ const resendOtpCode = async (req, res) => {
 
   res.status(200).json({
     success: true,
-    message: `OTP Verification code re-sended to email ${maskedEmail}`,
+    message: `OTP Verification code resent to email ${maskedEmail}`,
     ENTER_OTP: true,
   })
 

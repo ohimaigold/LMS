@@ -36,7 +36,7 @@ const AdminLogout = () => {
             style={{ width: '350px' }}
           />
 
-          <h3 className='h3'>are you sure, you want to Logout ? </h3>
+          <h3 className='h3'>Logout now? </h3>
 
           <button className='btn btn-success mx-5 my-3' onClick={handleLogout}>
             Yes

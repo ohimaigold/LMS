@@ -5,13 +5,13 @@ const bannerData = [
     id: 1,
     image: `/BannerOne.jpg`,
     heading: `Discover new worlds`,
-    paragraph: `Dive into captivating stories. Immerse yourself in a world of imagination and wonders.`,
+    paragraph: `Explore the fascinating world of books.`,
   },
   {
     id: 2,
     image: `/BannerTwo.jpg`,
     heading: `Escape through pages`,
-    paragraph: `Explore the vast realms of human wisdom and understanding through the pages of books.`,
+    paragraph: `Immerse yourself in classic literature, unravel mysteries, explore fantastical realms, experience the power of love, or engage with real-world.`,
   },
 ]
 

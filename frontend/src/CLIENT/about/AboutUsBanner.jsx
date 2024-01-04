@@ -7,8 +7,8 @@ const AboutUsBanner = () => {
     <div className='about-div-with-background border mt-5'>
       <Container>
         <Row className='about-quote-container mt-5 me-1'>
-          <h1>"When you want something in life, you just gotta reach out and grab it."</h1>
-          <p>― Christopher McCandless.</p>
+          <h3>"Don't settle down and sit in one place. Move around, be nomadic, make each day a new horizon."</h3>
+          <p>― Jon Krakauer, Into the Wild.</p>
         </Row>
       </Container>
     </div>
